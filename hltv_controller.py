@@ -10,16 +10,16 @@ from team import Team
 
 class HltvController:
     brazilianTeams = [
-        "00Nation",
-        "Case",
-        "FURIA",
-        "GODSENT",
-        "Last Dance",
-        "Los Grandes",
-        "MIBR",
-        "paiN",
-        "Sharks",
-        "TeamOne"]
+        "00Nation".casefold(),
+        "Case".casefold(),
+        "FURIA".casefold(),
+        "GODSENT".casefold(),
+        "Last Dance".casefold(),
+        "Los Grandes".casefold(),
+        "MIBR".casefold(),
+        "paiN".casefold(),
+        "Sharks".casefold(),
+        "TeamOne".casefold()]
 
     def get_all_games(self):
         matches_day = self.__upcoming_matches()
@@ -79,8 +79,8 @@ class HltvController:
 
                 hour = int(split_time[0])
                 minute = int(split_time[1])
-                match = Match(team1=Team(name=team1_name, isBrazilian=team1_name in self.brazilianTeams),
-                              team2=Team(name=team2_name, isBrazilian=team2_name in self.brazilianTeams),
+                match = Match(team1=Team(name=team1_name, isBrazilian=team1_name.casefold() in self.brazilianTeams),
+                              team2=Team(name=team2_name, isBrazilian=team2_name.casefold() in self.brazilianTeams),
                               link=link,
                               campName=event_name,
                               dateTime=datetime(year=year,
