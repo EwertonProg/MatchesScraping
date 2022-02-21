@@ -14,7 +14,7 @@ class HltvController:
         "Case".casefold(),
         "FURIA".casefold(),
         "GODSENT".casefold(),
-        "Last Dance".casefold(),
+        "Imperial".casefold(),
         "Los Grandes".casefold(),
         "MIBR".casefold(),
         "paiN".casefold(),
